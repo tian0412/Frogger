@@ -1,0 +1,75 @@
+<html>
+  <head>
+    <style>
+      .key {
+        width: 18px;
+        text-align: center;
+        border-radius: 3px;
+        background-color: lightgrey;
+    }
+    .highlight {
+        background-color: pink;
+    }
+    .hidden{
+      visibility: hidden;
+    }
+    .gameover{
+        font-family: sans-serif;
+        font-size: 50px;
+        fill: red;
+        /* visibility: hidden; */
+    }
+    div#controls {
+        float: right;
+        margin:50px;
+    }
+    div#scores {
+      float: right;
+      font-family: sans-serif;
+      /* font-size: 20px; */
+      margin: 50px;
+    }
+   
+    </style>
+    
+    <title>FIT2102 A1 2022</title>
+  <script defer src="main.js"></script></head>
+  <body>
+    <h1>Frogger</h1>
+
+    <svg id="svgCanvas" width="500" height="500" > 
+      <image id ="background" href="assets/background.png" width="500" height="500" />
+      <image class ="hidden" id="frogEnd1" href="assets/frogEnd.png" x ="19" y="44", width="35" height="35" />
+      <image class ="hidden" id="frogEnd2" href="assets/frogEnd.png" x ="127" y="44", width="35" height="35" />
+      <image class ="hidden" id="frogEnd3" href="assets/frogEnd.png" x ="233" y="44", width="35" height="35" />
+      <image class ="hidden" id="frogEnd4" href="assets/frogEnd.png" x ="340" y="44", width="35" height="35" />
+      <image class ="hidden" id="frogEnd5" href="assets/frogEnd.png" x ="447" y="44", width="35" height="35" />
+      <text id = "gameEnd" x = "100" y="45" class=" hidden gameover"> Game Over </text> 
+    </svg> 
+
+    <div id="controls">
+      <h2> Controls: </h2>
+      <table> 
+          <tr><td>Turn Left</td><td><div id ="ArrowLeft" class="key">&#8678;</div></td></tr> 
+          <tr><td>Turn Right</td><td><div id="ArrowRight" class="key">&#8680;</div></td></tr>
+          <tr><td>Move Up</td><td><div id ="ArrowUp" class="key">&#8679;</div></td></tr> 
+          <tr><td>Move Down</td><td><div id ="ArrowDown" class="key">&#8681;</div></td></tr> 
+          <tr><td>Restart Game</td><td>R</td></tr> 
+      </table>
+      </div>
+
+    <div id="scores" >
+      <h2> Scores: </h2>
+      <table>
+        <div id="highscore"></div>
+        <div id="score"></div>
+      </table>
+    </div>
+
+    <!-- <div id ="gameEnd" class="hidden gameover"> Game Over </div> -->
+
+
+    
+
+  </body>
+</html>
